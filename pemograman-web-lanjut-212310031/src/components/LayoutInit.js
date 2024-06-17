@@ -1,25 +1,26 @@
-import React from 'react';
-import Header from './Headers';
-import Footer from './Footers';
-import backgroundImage from '../media/img.jpg';
+import Footers from "./Footers";
+import Headers from "./Headers";
 
 const LayoutInit = ({ children }) => {
     return (
-      <div className="layout-container" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-        <div className="content-container">
-          <Header/>
-  
-          <section className="main-section">
-            <div className="main-content">
-              {children}
+        <div className="">
+            <div className="">
+                <div className="">
+
+                    <Headers />
+
+                    <section className="container">
+                        <div className="">
+                            {children}
+                        </div>
+                    </section>
+
+                    <Footers />
+
+                </div>
             </div>
-          </section>
-  
-          <Footer/>
         </div>
-      </div>
     );
-  };
-  
+};
 
 export default LayoutInit;
